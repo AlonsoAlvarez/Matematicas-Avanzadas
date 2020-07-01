@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage Title="Raiz y Potencia"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:Microcharts ="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms"
+             x:Class="MatematicasAvanzadas.RaizYpot">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Entry x:Name="RealXAML" Keyboard="Numeric" Placeholder="Parte Real"  Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3"></Entry>
+                    <Label Text="  +  " FontSize="30"  Grid.Row="0" Grid.Column="3"/>
+                    <Entry x:Name="ImaginariaXAML" Keyboard="Numeric" Placeholder="Parte Imaginaria"  Grid.Row="0" Grid.Column="4" Grid.ColumnSpan="3"></Entry>
+                    <Label Text="  i  " FontSize="30"  Grid.Row="0" Grid.Column="7"/>
+                    <Entry x:Name="ValPR" Keyboard="Numeric" Placeholder="Valores para Raiz y Potencia"  Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="8"></Entry>
+                    <Button Text="Raiz" x:Name="Raiz" Clicked="Raiz_Clicked"  Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="4"></Button>
+                    <Button Text="Potencia" x:Name="Potencia" Clicked="Potencia_Clicked"  Grid.Row="2" Grid.Column="4" Grid.ColumnSpan="4"></Button>
+                </Grid>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Resultado" x:Name="Resultado"/>
+                </StackLayout>
+                <StackLayout>
+                    <Microcharts:ChartView x:Name="Grafica" HeightRequest="250"/>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

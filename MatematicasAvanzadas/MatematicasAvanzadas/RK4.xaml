@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage Title="RK4"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:Microcharts ="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms"
+             x:Class="MatematicasAvanzadas.RK4">
+    <ContentPage.Content>
+
+        <ScrollView>
+            <StackLayout>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Label Text="x: " FontSize="20" Grid.Row="0" Grid.Column="0" />
+                    <Entry x:Name="xXAML" Keyboard="Numeric" Placeholder="          " Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" ></Entry>
+                    <Label Text="y: " FontSize="20" Grid.Row="0" Grid.Column="3" />
+                    <Entry x:Name="yXAML" Keyboard="Numeric" Placeholder="          " Grid.Row="0" Grid.Column="4" Grid.ColumnSpan="2" ></Entry>
+                    <Label Text="h: " FontSize="20" Grid.Row="0" Grid.Column="6" />
+                    <Entry x:Name="hXAML" Keyboard="Numeric" Placeholder="          " Grid.Row="0" Grid.Column="7" Grid.ColumnSpan="2" ></Entry>
+                    <Label Text="n: " FontSize="20" Grid.Row="0" Grid.Column="9" />
+                    <Entry x:Name="nXAML" Keyboard="Numeric" Placeholder="          " Grid.Row="0" Grid.Column="10" Grid.ColumnSpan="2" ></Entry>
+                    <Label Text="Funcion: " FontSize="20" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3"/>
+                    <Entry x:Name="funXAML" Placeholder="Funcion                                " Grid.Row="1" Grid.Column="3" Grid.ColumnSpan="9"></Entry>
+                    <Button Text="Calcular" x:Name="calcula" Clicked="calcula_Clicked" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="6"></Button>
+                    <Button Text="Ejemplo" x:Name="ejemplo" Clicked="ejemplo_Clicked" Grid.Row="2" Grid.Column="6" Grid.ColumnSpan="6"></Button>
+                </Grid>
+                <StackLayout Orientation="Horizontal">
+                    <Label x:Name="kXAML" Text="Resultados K                                " FontSize="20"></Label>
+                </StackLayout>
+                <StackLayout>
+                    <Label Text="Resultado" x:Name="Resultado" />
+                </StackLayout>
+                <StackLayout>
+                    <Microcharts:ChartView x:Name="Grafica" HeightRequest="250"/>
+                </StackLayout>
+            </StackLayout>
+
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

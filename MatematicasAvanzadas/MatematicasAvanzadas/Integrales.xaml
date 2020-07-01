@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage Title="Integrales" xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="MatematicasAvanzadas.Integrales">
+    <ContentPage.Content>
+        <ScrollView>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Label Text="Lim Sup: " FontSize="15" Grid.Row="0" Grid.Column="0"/>
+            <Entry x:Name="supXAML" Keyboard="Numeric" Placeholder="b" Grid.Row="0" Grid.Column="1"></Entry>
+            <Label Text="Lim Inf: " FontSize="15" Grid.Row="0" Grid.Column="2"/>
+            <Entry x:Name="infXAML" Keyboard="Numeric" Placeholder="a" Grid.Row="0" Grid.Column="3"></Entry>
+            <Label Text="Funcion: " FontSize="20" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" />
+            <Entry x:Name="funXAML" IsReadOnly="True"  Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" Placeholder="f(x)                             "></Entry>
+            <Label Text="Result :" FontSize="23" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" />
+            <Entry x:Name="resultXAML" Keyboard="Numeric" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" Placeholder="resultado                            "  IsReadOnly="True" TextColor="Red"/>
+            <Button Text="Sen" x:Name="sin" Clicked="sin_Clicked" Grid.Row="3" Grid.Column="0"></Button>
+            <Button Text="Cos" x:Name="cos" Clicked="cos_Clicked" Grid.Row="3" Grid.Column="1"></Button>
+            <Button Text="Tan" x:Name="tan" Clicked="tan_Clicked" Grid.Row="3" Grid.Column="2"></Button>
+            <Button Text=" ^ " x:Name="clear" Clicked="clear_Clicked" Grid.Row="3" Grid.Column="3"></Button>
+            <Button Text=" ( " x:Name="abp" Clicked="abp_Clicked" Grid.Row="4" Grid.Column="0"></Button>
+            <Button Text=" ) " x:Name="crp" Clicked="crp_Clicked" Grid.Row="4" Grid.Column="1"></Button>
+            <Button Text=" x " x:Name="xvar" Clicked="xvar_Clicked" Grid.Row="4" Grid.Column="2"></Button>
+            <Button Text=" = " x:Name="res" Clicked="res_Clicked" Grid.Row="4" Grid.Column="3"></Button>
+            <Button Text=" + " x:Name="suma" Clicked="suma_Clicked" Grid.Row="5" Grid.Column="0"></Button>
+            <Button Text=" - " x:Name="resta" Clicked="resta_Clicked" Grid.Row="5" Grid.Column="1"></Button>
+            <Button Text=" * " x:Name="mult" Clicked="mult_Clicked" Grid.Row="5" Grid.Column="2"></Button>
+            <Button Text=" / " x:Name="div" Clicked="div_Clicked" Grid.Row="5" Grid.Column="3"></Button>
+            <Button Text=" 1 " x:Name="uno" Clicked="uno_Clicked" Grid.Row="6" Grid.Column="0"></Button>
+            <Button Text=" 2 " x:Name="dos" Clicked="dos_Clicked" Grid.Row="6" Grid.Column="1"></Button>
+            <Button Text=" 3 " x:Name="tre" Clicked="tre_Clicked" Grid.Row="6" Grid.Column="2"></Button>
+            <Button Text=" 4 " x:Name="cuatro" Clicked="cuatro_Clicked" Grid.Row="6" Grid.Column="3"></Button>
+            <Button Text=" 5 " x:Name="cinco" Clicked="cinco_Clicked" Grid.Row="7" Grid.Column="0"></Button>
+            <Button Text=" 6 " x:Name="seis" Clicked="seis_Clicked" Grid.Row="7" Grid.Column="1"></Button>
+            <Button Text=" 7 " x:Name="siete" Clicked="siete_Clicked" Grid.Row="7" Grid.Column="2"></Button>
+            <Button Text=" 8 " x:Name="ocho" Clicked="ocho_Clicked" Grid.Row="7" Grid.Column="3"></Button>
+            <Button Text=" 9 " x:Name="nueve" Clicked="nueve_Clicked" Grid.Row="8" Grid.Column="0"></Button>
+            <Button Text=" 0 " x:Name="cero" Clicked="cero_Clicked" Grid.Row="8" Grid.Column="1"></Button>
+            <Button Text=" . " x:Name="punto" Clicked="punto_Clicked" Grid.Row="8" Grid.Column="2"></Button>
+            <Button Text=" CE " x:Name="ce" Clicked="ce_Clicked" Grid.Row="8" Grid.Column="3"></Button>
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

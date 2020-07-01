@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage Title="Modulo"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="MatematicasAvanzadas.Calculadora">
+    <ContentPage.Content>
+        <FlexLayout>
+            <StackLayout Orientation="Horizontal">
+                <Entry x:Name="RealXAML" Keyboard="Numeric" Placeholder="Parte Real"></Entry>
+                <Label Text="  +  " FontSize="30"/>
+                <Entry x:Name="ImaginariaXAML" Keyboard="Numeric" Placeholder="Parte Imaginaria"></Entry>
+                <Label Text="  i  " FontSize="30"/>
+            </StackLayout>
+            <StackLayout  Orientation="Horizontal">
+                <Label Text="Result:  " FontSize="30"/>
+                <Label x:Name="Resultado" FontSize="32"></Label>
+            </StackLayout>
+            <Button Text="Modulo" x:Name="Modulo" Clicked="Modulo_Clicked"></Button>
+        </FlexLayout>
+    </ContentPage.Content>
+</ContentPage>

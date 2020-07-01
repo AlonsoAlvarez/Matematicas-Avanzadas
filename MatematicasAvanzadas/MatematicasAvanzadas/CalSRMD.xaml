@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage Title="Calculadora"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="MatematicasAvanzadas.CalSRMD">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="45" />
+                        <RowDefinition Height="45" />
+                        <RowDefinition Height="40" />
+                        <RowDefinition Height="40" />
+                        <RowDefinition Height="45" />
+                        <RowDefinition Height="60" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Entry x:Name="N1RealXAML" Keyboard="Numeric" Placeholder="Parte Real" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="5"></Entry>
+                    <Label Text="+  " FontSize="30" Grid.Row="0" Grid.Column="5"/>
+                    <Entry x:Name="N1ImaginariaXAML" Keyboard="Numeric" Placeholder="Parte Imaginaria" Grid.Row="0" Grid.Column="6" Grid.ColumnSpan="5"></Entry>
+                    <Label Text="  i  " FontSize="30" Grid.Row="0" Grid.Column="11"/>
+                    <Entry x:Name="N2RealXAML" Keyboard="Numeric" Placeholder="Parte Real" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="5"></Entry>
+                    <Label Text="+  " FontSize="30" Grid.Row="1" Grid.Column="5"/>
+                    <Entry x:Name="N2ImaginariaXAML" Keyboard="Numeric" Placeholder="Parte Imaginaria" Grid.Row="1" Grid.Column="6" Grid.ColumnSpan="5"></Entry>
+                    <Label Text="  i  " FontSize="30" Grid.Row="1" Grid.Column="11"/>
+                    <Label Text="Result:  " FontSize="30" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="4"/>
+                    <Label x:Name="Rreal" FontSize="32" Text="0.0+0.0i" Grid.Row="2" Grid.Column="4" Grid.ColumnSpan="8" ></Label>
+                    <Button Text="+" x:Name="Suma" Clicked="Suma_Clicked" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" ></Button>
+                    <Button Text="-" x:Name="Resta" Clicked="Resta_Clicked" Grid.Row="3" Grid.Column="3" Grid.ColumnSpan="3" ></Button>
+                    <Button Text="*" x:Name="Mult" Clicked="Mult_Clicked" Grid.Row="3" Grid.Column="6" Grid.ColumnSpan="3" ></Button>
+                    <Button Text="/" x:Name="Division" Clicked="Division_Clicked" Grid.Row="3" Grid.Column="9" Grid.ColumnSpan="3" ></Button>
+                    <Entry x:Name="RealXAMLMod" Keyboard="Numeric" Placeholder="Parte Real" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="5"></Entry>
+                    <Label Text="+  " FontSize="30" Grid.Row="4" Grid.Column="5"/>
+                    <Entry x:Name="ImaginariaXAMLMod" Keyboard="Numeric" Placeholder="Parte Imaginaria" Grid.Row="4" Grid.Column="6" Grid.ColumnSpan="5"></Entry>
+                    <Label Text="  i  " FontSize="30" Grid.Row="4" Grid.Column="11"/>
+                    <Label Text="Result:  " FontSize="30" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="4"/>
+                    <Label x:Name="ResultadoMod" FontSize="32" Text="0.0+0.0i" Grid.Row="5" Grid.Column="4" Grid.ColumnSpan="8" ></Label>
+                    <Button Text="Modulo" x:Name="Modulo" Clicked="Modulo_Clicked" Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="12"></Button>
+                </Grid>
+                <StackLayout>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

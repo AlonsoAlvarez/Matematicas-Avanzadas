@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage Title="Series"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:Microcharts ="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms"
+             x:Class="MatematicasAvanzadas.Series">
+    <ContentPage.Content>
+        <Grid>
+            <ScrollView>
+                <StackLayout>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Label Text="  b: " FontSize="20" Grid.Row="0" Grid.Column="0" />
+                        <Entry x:Name="supXAML" Keyboard="Numeric" Placeholder="Lim Sup" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2"></Entry>
+                        <Label Text="  a: " FontSize="20" Grid.Row="0" Grid.Column="3"/>
+                        <Entry x:Name="infXAML" Keyboard="Numeric" Placeholder="Lim Inf" Grid.Row="0" Grid.Column="4" Grid.ColumnSpan="2"></Entry>
+                        <Label Text="  n: " FontSize="20" Grid.Row="0" Grid.Column="6"/>
+                        <Entry x:Name="nXAML" Keyboard="Numeric" Placeholder="Numero" Grid.Row="0" Grid.Column="7" Grid.ColumnSpan="2"></Entry>
+                        <Label Text="  f(x): " FontSize="20" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"/>
+                        <Entry x:Name="funXAML" Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="7" Placeholder="Funcion                                "></Entry>
+                    </Grid>
+
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Button Text="TrCos" x:Name="TrCos" Clicked="TrCos_Clicked" Grid.Row="0" Grid.Column="0"></Button>
+                        <Button Text="TrSen" x:Name="TrSem" Clicked="TrSem_Clicked" Grid.Row="0" Grid.Column="1"></Button>
+                        <Button Text="Serie" x:Name="Serie" Clicked="Serie_Clicked" Grid.Row="0" Grid.Column="2"></Button>
+                        <Button Text="Ejemplo" x:Name="Ejemplo" Clicked="Ejemplo_Clicked" Grid.Row="0" Grid.Column="3"></Button>
+                    </Grid>
+                    <StackLayout>
+                <Label Text="Resultado" x:Name="Resultado" />
+            </StackLayout>
+            <StackLayout>
+                <Microcharts:ChartView x:Name="Grafica" HeightRequest="250"/>
+            </StackLayout>
+            <StackLayout>
+                <Label Text="Puntos de grafica" x:Name="ResGraf" />
+            </StackLayout>
+            </StackLayout>
+        </ScrollView>
+        <Grid x:Name="GridProgress" IsVisible="False">
+            <BoxView Color="White"/>
+            <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+                <ActivityIndicator IsEnabled="True" IsVisible="True" IsRunning="True" WidthRequest="30" HeightRequest="30"/>
+                <Label Text="Subiendo imagen"/>
+            </StackLayout>
+        </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
