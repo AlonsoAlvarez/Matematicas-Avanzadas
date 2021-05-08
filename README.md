@@ -1,4 +1,4 @@
-# Pagina Inventario
+# Matematicas Avanzadas
 
 Proyecto escolar, aplicacion en Xamarin util para metodos numericos.
 
